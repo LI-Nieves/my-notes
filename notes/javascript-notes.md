@@ -1,9 +1,9 @@
 ---
-id: wior0xau33vb8uns7mrr26a
-title: Javascript Notes
+id: 7bmdk2ns7t3cnt3djxmh5en
+title: JavaScript Notes
 desc: ''
-updated: 1709541795499
-created: 1709541770993
+updated: 1709606880853
+created: 1709606866393
 ---
 # Notes from [W3Schools](https://www.w3schools.com/js/default.asp)
 
