@@ -106,3 +106,5 @@ publishing:
     enableTaskNotes: true
     enablePrettyLinks: true
     searchMode: search
+    assetsPrefix: /my-notes
+    siteUrl: https://li-nieves.github.io
