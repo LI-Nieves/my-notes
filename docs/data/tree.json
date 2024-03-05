@@ -1,0 +1,28 @@
+{
+  "roots": [
+    {
+      "key": "mbetjzwrzja247x44dp1cn4",
+      "title": "Git Commands",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron-notes",
+      "children": []
+    },
+    {
+      "key": "7bmdk2ns7t3cnt3djxmh5en",
+      "title": "JavaScript Notes",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron-notes",
+      "children": []
+    }
+  ],
+  "child2parent": {
+    "mbetjzwrzja247x44dp1cn4": null,
+    "7bmdk2ns7t3cnt3djxmh5en": null
+  },
+  "notesLabelById": {
+    "mbetjzwrzja247x44dp1cn4": "Git Commands",
+    "7bmdk2ns7t3cnt3djxmh5en": "JavaScript Notes"
+  }
+}

@@ -1,0 +1,80 @@
+<h1 id="git-commands">Git Commands<a aria-hidden="true" class="anchor-heading icon-link" href="#git-commands"></a></h1>
+<p>Example: Contribute to an existing repository</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># download a repository on GitHub to our machine</span>
+<span class="token comment"># Replace `owner/repo` with the owner and name of the repository to clone</span>
+<span class="token function">git</span> clone https://github.com/owner/repo.git
+
+<span class="token comment"># change into the `repo` directory</span>
+<span class="token builtin class-name">cd</span> repo
+
+<span class="token comment"># create a new branch to store any new changes</span>
+<span class="token function">git</span> branch my-branch
+
+<span class="token comment"># switch to that branch (line of development)</span>
+<span class="token function">git</span> checkout my-branch
+
+<span class="token comment"># make changes, for example, edit `file1.md` and `file2.md` using the text editor</span>
+
+<span class="token comment"># stage the changed files</span>
+<span class="token function">git</span> <span class="token function">add</span> file1.md file2.md
+
+<span class="token comment"># take a snapshot of the staging area (anything that's been added)</span>
+<span class="token function">git</span> commit -m <span class="token string">"my snapshot"</span>
+
+<span class="token comment"># push changes to github</span>
+<span class="token function">git</span> push --set-upstream origin my-branch
+</code></pre>
+<p>Example: Start a new repository and publish it to GitHub</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># create a new directory, and initialize it with git-specific functions</span>
+<span class="token function">git</span> init my-repo
+
+<span class="token comment"># change into the `my-repo` directory</span>
+<span class="token builtin class-name">cd</span> my-repo
+
+<span class="token comment"># create the first file in the project</span>
+<span class="token function">touch</span> README.md
+
+<span class="token comment"># git isn't aware of the file, stage it</span>
+<span class="token function">git</span> <span class="token function">add</span> README.md
+
+<span class="token comment"># take a snapshot of the staging area</span>
+<span class="token function">git</span> commit -m <span class="token string">"add README to initial commit"</span>
+
+<span class="token comment"># provide the path for the repository you created on github</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git
+
+<span class="token comment"># push changes to github</span>
+<span class="token function">git</span> push --set-upstream origin main
+</code></pre>
+<p>Example: Contribute to an existing branch on GitHub</p>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># change into the `repo` directory</span>
+<span class="token builtin class-name">cd</span> repo
+
+<span class="token comment"># update all remote tracking branches, and the currently checked out branch</span>
+<span class="token function">git</span> pull
+
+<span class="token comment"># change into the existing branch called `feature-a`</span>
+<span class="token function">git</span> checkout feature-a
+
+<span class="token comment"># make changes, for example, edit `file1.md` using the text editor</span>
+
+<span class="token comment"># stage the changed file</span>
+<span class="token function">git</span> <span class="token function">add</span> file1.md
+
+<span class="token comment"># take a snapshot of the staging area</span>
+<span class="token function">git</span> commit -m <span class="token string">"edit file1"</span>
+
+<span class="token comment"># push changes to github</span>
+<span class="token function">git</span> push
+</code></pre>
+<p>Setting a remote branch as default </p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/<span class="token operator">&#x3C;</span>remote-branch<span class="token operator">></span> <span class="token operator">&#x3C;</span>local-branch<span class="token operator">></span>
+    <span class="token comment"># or git branch -u origin/&#x3C;remote-branch> &#x3C;local-branch></span>
+<span class="token comment"># automatically pulls in commits from &#x3C;remote-branch> into local branch </span>
+<span class="token function">git</span> pull
+<span class="token comment"># pushes local changes to remote branch</span>
+<span class="token function">git</span> push origin HEAD:<span class="token operator">&#x3C;</span>remote-branch<span class="token operator">></span>
+</code></pre>
+<p>Error: <code>fatal: refusing to merge unrelated histories</code>, <a href="https://stackoverflow.com/questions/45272492/git-is-refusing-to-merge-unrelated-histories-what-are-unrelated-histories">source</a></p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master --allow-unrelated-histories
+</code></pre>
